@@ -1,0 +1,135 @@
+.contact-section {
+  position: relative;
+  margin-top: 50px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  margin-bottom: 50px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-desc {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--bg-card);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: transform 0.3s;
+}
+
+.info-item:hover {
+  transform: translateX(10px);
+}
+
+.info-icon {
+  color: var(--accent-teal);
+  background: rgba(22, 242, 179, 0.1);
+  padding: 12px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.info-item h4 {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.info-item p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.contact-form-wrapper {
+  background: var(--bg-card);
+  border-radius: 15px;
+  padding: 40px;
+  border: 1px solid rgba(255,255,255,0.05);
+  box-shadow: 0 0 40px rgba(0,0,0,0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle glowing corner for the form */
+.contact-form-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: var(--accent-pink);
+  filter: blur(80px);
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.contact-form {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-title {
+  color: var(--text-light);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background: rgba(13, 18, 36, 0.5);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--text-light);
+  padding: 15px;
+  border-radius: 8px;
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-violet);
+}
+
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}

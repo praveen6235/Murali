@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap');
+
+:root {
+  --bg-dark: #0d1224;
+  --bg-card: #11152c;
+  --text-light: #f8fafc;
+  --text-muted: #8b98a5;
+  --accent-violet: #7c3aed;
+  --accent-pink: #ec4899;
+  --accent-teal: #16f2b3;
+  --nav-height: 80px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  /* SVG Grid pattern like original */
+  background-image: 
+    linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Add a glowing radial gradient background behind everything */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, rgba(13, 18, 36, 0) 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.section-container {
+  padding: 80px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, var(--accent-pink), var(--accent-violet));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Mac OS Window Dots */
+.mac-dots {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.mac-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.mac-dot.red { background-color: #ff5f56; }
+.mac-dot.yellow { background-color: #ffbd2e; }
+.mac-dot.green { background-color: #27c93f; }

@@ -1,0 +1,82 @@
+.skills-section {
+  position: relative;
+  margin-top: 50px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.section-header-center {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.pill-title {
+  background-color: var(--bg-card);
+  color: var(--accent-violet);
+  padding: 10px 40px;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.1);
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  position: relative;
+  background-color: var(--bg-card);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 2px; /* For the glow wrapper */
+  overflow: hidden;
+  transition: all 0.3s ease;
+  min-width: 140px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* Glowing top border effect */
+.skill-glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-violet), transparent);
+  opacity: 0.5;
+  transition: width 0.3s, opacity 0.3s;
+}
+
+.skill-card:hover .skill-glow {
+  width: 100%;
+  opacity: 1;
+  background: linear-gradient(90deg, var(--accent-pink), var(--accent-violet));
+}
+
+.skill-content {
+  background-color: #0b1120;
+  border-radius: 10px;
+  padding: 20px 25px;
+  height: 100%;
+}
+
+.skill-content p {
+  color: var(--text-light);
+  font-size: 1rem;
+  font-weight: 500;
+}

@@ -1,0 +1,120 @@
+.hero-section {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+  padding-top: var(--nav-height);
+}
+
+.hero-name {
+  font-size: clamp(30px, 4vw, 50px);
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text-light);
+  margin-bottom: 30px;
+}
+
+.text-teal {
+  color: var(--accent-teal);
+}
+
+.hero-socials {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.hero-socials a {
+  color: var(--accent-teal);
+  transition: all 0.3s;
+  padding: 8px;
+}
+
+.hero-socials a:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px rgba(22, 242, 179, 0.5));
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-primary {
+  background: linear-gradient(to right, var(--accent-pink), var(--accent-violet));
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -10px var(--accent-violet);
+}
+
+.btn-secondary {
+  background: var(--bg-card);
+  color: white;
+  border: 1px solid var(--accent-violet);
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--accent-violet);
+  transform: translateY(-2px);
+}
+
+/* Code Window */
+.code-window {
+  background-color: var(--bg-card);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 30px rgba(124, 58, 237, 0.2);
+  overflow: hidden;
+  font-family: 'Fira Code', monospace;
+}
+
+.code-header {
+  background-color: #1a1f3c;
+  padding: 10px 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.code-body {
+  padding: 30px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #a8b2d1;
+}
+
+.code-keyword { color: #f92672; }
+.code-variable { color: #66d9ef; }
+.code-operator { color: #f8f8f2; }
+.code-property { color: #a6e22e; }
+.code-string { color: #e6db74; }
+.code-method { color: #66d9ef; font-style: italic; }
+.code-boolean { color: #ae81ff; }
+
+@media (max-width: 992px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    text-align: left;
+    padding-top: 120px;
+  }
+}
